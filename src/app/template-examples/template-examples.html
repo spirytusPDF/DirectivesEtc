@@ -1,0 +1,27 @@
+<section>
+    <h1>Variables</h1>
+    <div>
+       <input 
+    #passwordInput 
+    [type]="isPasswordVisible ? 'text' : 'password'" 
+    placeholder="enter password"
+  />
+
+  <button (click)="toggleVisibility(); passwordInput.focus()">
+    {{ isPasswordVisible ? 'Hide' : 'Show' }}
+  </button> 
+    </div>
+
+    <div>
+        <input 
+        #pass
+        type="password"
+        (input)="checkLength(pass.value)"
+        >
+
+        <p>Length: {{passLength}}</p>
+    </div>
+
+    <div>
+    </div>
+</section>
